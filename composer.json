@@ -5,14 +5,14 @@
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "require": {
-        "php": "^8.0.|^8.2",
+        "php": "^8.0.2",
+        "davmixcool/laravel-meta-manager": "^1.2",
         "guzzlehttp/guzzle": "^7.2",
+        "itsgoingd/clockwork": "^5.1",
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^3.0",
         "laravel/tinker": "^2.7",
-        "laravel/ui": "^4.2",
-        "rap2hpoutre/fast-excel": "^5.2",
-        "yajra/laravel-datatables-oracle": "^10.4"
+        "yoeunes/toastr": "^2.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
@@ -63,6 +63,6 @@
             "pestphp/pest-plugin": true
         }
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true
 }

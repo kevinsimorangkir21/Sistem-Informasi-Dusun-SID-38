@@ -1,7 +1,19 @@
 <?php
 
-use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\AccountController;
+use App\Models\Team;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TagController;
+use Illuminate\Support\Facades\Artisan;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\TeamController;
+use App\Http\Controllers\PagesController;
+use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,60 +26,108 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Auth::routes([
-    'register' => false,
-    'verify' => false,
-    'reset' => false
-]);
+Route::controller(PagesController::class)->group(function () {
+    Route::get('/', 'index');
+    Route::get('/team', 'team');
+    Route::get('/blog', 'blog');
+    Route::get('/blog/detail/{post}', 'detail');
+    Route::post('/post/visit', 'visit');
+    Route::get('/blog/authors/{user:username}', 'authors');
+    Route::get('/blog/categories/{category:slug}', 'categories');
+    Route::get('/blog/tags/{tag:slug_tag}', 'tags');
+    Route::get('/blog/published/{post:published_at}', 'published');
+});
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::controller(AuthController::class)->group(function () {
+    Route::get('login', 'index');
+    Route::post('/login', 'login')->name('login');
+});
+Route::middleware(['auth'])->group(function () {
+    Route::controller(DashboardController::class)->group(function () {
+        Route::get('/dashboard', 'index');
+        Route::get('/dashboard/traffic', 'traffic');
+        Route::get('/dashboard/post', 'post');
+    });
 
-Route::prefix('admin')->middleware('auth')->group(function () {
-    Route::get('', [App\Http\Controllers\Admin\IndexController::class, 'index'])->name('dashboard');
-
-    // route profile
-    Route::prefix('profile')->group(function () {
-        Route::prefix('struktur')->group(function () {
-            Route::get('', [App\Http\Controllers\Admin\Profile\StrukturController::class, 'index'])->name('admin.struktur.index');
-            Route::get('create', [App\Http\Controllers\Admin\Profile\StrukturController::class, 'create'])->name('admin.struktur.create');
-            Route::post('create', [App\Http\Controllers\Admin\Profile\StrukturController::class, 'store'])->name('admin.struktur.store');
-            Route::get('edit/{id}', [App\Http\Controllers\Admin\Profile\StrukturController::class, 'edit'])->name('admin.struktur.edit');
-            Route::patch('edit/{id}', [App\Http\Controllers\Admin\Profile\StrukturController::class, 'update'])->name('admin.struktur.update');
-            Route::delete('edit/{id}', [App\Http\Controllers\Admin\Profile\StrukturController::class, 'destroy'])->name('admin.struktur.destroy');
+    // For Category
+    Route::controller(CategoryController::class)->group(function () {
+        Route::get('/blog/categories', 'index');
+        Route::get('/blog/category/create', 'create');
+        Route::post('/blog/category', 'store');
+        Route::get('/blog/category/edit/{id}', 'edit');
+        Route::patch('/blog/category/update/{id}', 'update');
+        Route::delete('/blog/category/destroy/{id}', 'destroy');
+    });
+    // For Tags
+    Route::controller(TagController::class)->group(function () {
+        Route::get('/blog/tags', 'index');
+        Route::get('/blog/tag/create', 'create');
+        Route::post('/blog/tag', 'store');
+        Route::get('/blog/tag/edit/{id}', 'edit');
+        Route::patch('/blog/tag/update/{id}', 'update');
+        Route::delete('/blog/tag/destroy/{id}', 'destroy');
+    });
+    // For Posts
+    Route::controller(PostController::class)->group(function () {
+        Route::get('/blog/posts', 'index');
+        Route::get('/blog/post/create', 'create');
+        Route::post('/blog/post', 'store');
+        Route::get('/blog/post/edit/{id}', 'edit');
+        Route::get('/blog/post/show/{id}', 'show');
+        Route::patch('/blog/post/update/{id}', 'update');
+        Route::delete('/blog/post/destroy/{id}', 'destroy');
+    });
+    // For Teams
+    Route::middleware(['admin'])->group(function () {
+        Route::controller(TeamController::class)->group(function () {
+            Route::get('/teams', 'index');
+            Route::get('/team/create', 'create');
+            Route::post('/team', 'store');
+            Route::get('/team/edit/{id}', 'edit');
+            Route::patch('/team/update/{id}', 'update');
+            Route::get('/team/destroy/{id}', 'destroy');
         });
-
-        Route::get('', [App\Http\Controllers\Admin\Profile\SejarahController::class, 'index'])->name('admin.sejarah.index');
-        Route::post('', [App\Http\Controllers\Admin\Profile\SejarahController::class, 'store'])->name('admin.sejarah.store');
+        // For Gallery
+        Route::controller(GalleryController::class)->group(function () {
+            Route::get('/galleries', 'index');
+            Route::get('/gallery/create', 'create');
+            Route::post('/gallery', 'store');
+            Route::get('/gallery/edit/{id}', 'edit');
+            Route::get('/gallery/destroy/{id}', 'destroy');
+        });
+        // For Create Account
+        Route::controller(AccountController::class)->group(function () {
+            Route::get('/accounts', 'index');
+            Route::get('/account/create', 'create');
+            Route::post('/account', 'store');
+            Route::get('/account/{username}/show', 'show');
+            Route::get('/account/{username}/edit','edit');
+            Route::patch('/account/{id}/update', 'update');
+            Route::get('/account/{username}/change-password', 'changePassword');
+            Route::patch('/account/{id}/update-password', 'updatePassword');
+            Route::delete('/account/{id}/destroy', 'destroy');
+        });
     });
-
-    Route::prefix('demografi')->group(function () {
-        Route::get('', [App\Http\Controllers\Admin\Demografi\IndexController::class, 'index'])->name('admin.demografi.index');
-        Route::resource('agama', App\Http\Controllers\Admin\Demografi\AgamaController::class, [
-            'as' => 'demografi',
-            // 'only' => ['index', 'edit', 'store', 'destroy', 'show', 'update']
-        ]);
-        Route::resource('penduduk', App\Http\Controllers\Admin\Demografi\PendudukController::class, [
-            'as' => 'demografi',
-            // 'only' => ['index', 'edit', 'store', 'destroy', 'show', 'update']
-        ]);
-        Route::resource('pendidikan', App\Http\Controllers\Admin\Demografi\PendidikanController::class, [
-            'as' => 'demografi',
-            // 'only' => ['index', 'edit', 'store', 'destroy', 'show', 'update']
-        ]);
-        Route::resource('pekerjaan', App\Http\Controllers\Admin\Demografi\PekerjaanController::class, [
-            'as' => 'demografi',
-            // 'only' => ['index', 'edit', 'store', 'destroy', 'show', 'update']
-        ]);
+    Route::controller(ProfileController::class)->group(function () {
+        Route::get('/profile', 'index');
+        Route::patch('/profile/update/{id}', 'update');
+        Route::patch('/password/update/{id}', 'password');
+        Route::patch('/image/update/{id}', 'changeImage');
     });
-
-    // route tanah
-    Route::prefix('tanah')->group(function () {
-        Route::get('', [App\Http\Controllers\Admin\TanahController::class, 'index'])->name('admin.tanah.index');
-        Route::get('edit/{id}', [App\Http\Controllers\Admin\TanahController::class, 'edit'])->name('admin.tanah.edit');
-        Route::get('export', [App\Http\Controllers\Admin\TanahController::class, 'export'])->name('admin.tanah.export');
-        Route::patch('edit/{id}', [App\Http\Controllers\Admin\TanahController::class, 'update'])->name('admin.tanah.update');
-        Route::delete('edit/{id}', [App\Http\Controllers\Admin\TanahController::class, 'destroy'])->name('admin.tanah.destroy');
-        Route::get('create', [App\Http\Controllers\Admin\TanahController::class, 'create'])->name('admin.tanah.create');
-        Route::post('create', [App\Http\Controllers\Admin\TanahController::class, 'store'])->name('admin.tanah.store');
+    Route::get('update', function () {
+        $data = Team::all();
+        $id = 1;
+        foreach ($data as $key => $value) {
+            DB::table('aparaturs')->where('id', $value->id)->update([
+                'id' => $id
+            ]);
+            $id++;
+        }
+        return redirect('dashboard');
     });
+    Route::get('/cache-clear', function () {
+        $m = Artisan::call('optimize:clear');
+        return $m;
+    });
+    Route::post('/logout', [AuthController::class, 'logout']);
 });
