@@ -22,7 +22,7 @@
 [Presentation Video](#)
 
 ## **Introduction Website**
-SID38 is an Information System aimed at Hamlet 3B in Karang Anyar Village, Jati Agung District, South Lampung. SID38 is based on CMS (<i>Content Management System</i>) using the Laravel framework
+The Dusun 3B Information System, abbreviated as SID 3B, is an Information System aimed at Hamlet 3B in Karang Anyar Village, Jati Agung District, South Lampung. SID38 is based on a CMS (<i>Content Management System</i>) using Laravel 5 and Bootstrap framework. SID 3B contains several news, management structures, galleries, and others.
 
 ## **Features Website**
 <li> <b>Dashboard</b> : A feature that aims to organize the content/material on the SID38 website <li> <b>Structure</b> : This feature aims to find out the existing management structure in Hamlet 3B <li> <b>Hamlet Demography</b> : A feature that aims to find out Population, Religion and Occupation Data from Hamlet 3B residents</li>
