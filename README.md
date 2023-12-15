@@ -67,10 +67,10 @@ https://git-scm.com/downloads
 
 At this stage is the installation stage of this project with the available steps. Here are the installation steps:
 
-<li> Jalankan GitBash dan <i>clone</i> repository GitHub ini</li>
+<li> Run GitBash and <i>clone</i> this GitHub repository</li>
 
 ```bash
-https://github.com/kevinsimorangkir21/SID3B.git
+https://github.com/kevinsimorangkir21/Sistem-Informasi-Dusun-SID-3B.git
 ```
 
 <li> Open Visual Studio Code / Kode Editor lainnya </li>
