@@ -1,6 +1,5 @@
 <div align="center">
 <h1> Sistem Informasi Dusun (SID) 3B </h1>
-<h2> Version : 0.1 (Beta) <h2>
 
 [![Github Commit](https://img.shields.io/github/commit-activity/m/kevinsimorangkir21/Sistem-Informasi-Dusun-SID-3B)](#)
 [![Github Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg)](#)
