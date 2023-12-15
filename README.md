@@ -29,7 +29,7 @@ The Dusun 3B Information System, abbreviated as SID 3B, is an Information System
 
 ## **Features Website**
 
-<li> <b>Dashboard</b> : A feature that aims to organize the content/material on the SID38 website </li> <li><b>Structure</b> : This feature aims to find out the existing management structure in Hamlet 3B <li> <b>News </b> : A feature created with the aim of displaying news in Hamlet 3B <li><b>Galeri</b> : A feature created with the aim of displaying a gallery of activities in Hamlet 3B </li>
+<li> <b>Dashboard</b> : A feature that aims to organize the content/material on the SID38 website </li> <li><b>Structure</b> : This feature aims to find out the existing management structure in Hamlet 3B <li> <b>News </b> : A feature created with the aim of displaying news in Hamlet 3B <li><b>Galery</b> : A feature created with the aim of displaying a gallery of activities in Hamlet 3B </li>
 
 ## **Installation Steps**
 
