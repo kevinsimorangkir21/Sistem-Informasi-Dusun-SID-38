@@ -7,14 +7,14 @@
         <li class="nav-item">
             <a class="nav-link {{ Request::is('dashboard') ? '' : 'collapsed' }}" href="{{ url('/dashboard') }}">
                 <i class="bi bi-grid"></i>
-                <span>Dasbor</span>
+                <span>Dashboard</span>
             </a>
         </li>
 
         <li class="nav-item">
             <a class="nav-link collapsed" href="{{ url('/') }}">
-                <i class="bi bi-grid"></i>
-                <span>Home</span>
+                <i class="bi bi-house"></i>
+                <span>Beranda</span>
             </a>
         </li><!-- End Dashboard Nav -->
 
@@ -23,7 +23,7 @@
         @if (Auth()->user()->role == true)
             <li class="nav-item">
                 <a href="{{ url('/blog/categories') }}" class="nav-link {{ Request::is('blog/categories') ? '' : 'collapsed' }}">
-                    <i class="bi bi-card-list"></i><span>Kategori</span>
+                    <i class="bi bi-text-indent-left"></i><span>Kategori</span>
                 </a>
             </li>
             <li class="nav-item">
@@ -61,7 +61,7 @@
             <li class="nav-heading">Akun</li>
             <li class="nav-item">
                 <a class="nav-link {{ Request::is('account*') ? '' : 'collapsed' }}" href="{{ url('/accounts') }}">
-                    <i class="bi bi-people"></i>
+                    <i class="bi bi-person-badge"></i>
                     <span>Akun</span>
                 </a>
             </li>

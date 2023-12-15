@@ -2,12 +2,12 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>DUSUN 3B | Dasbor</title>
+    <title>DUSUN 3B | Dashboard</title>
     <meta content="Website informasi Desa Dusun #b" name="description">
     <meta content="Dusun 3B, Desa Karang Anyar, Kec Jati Agung, Lampung Selatan" name="keywords">
 
     <!-- Favicons -->
-    <link href="{{ url('/assets/img/R.jpg') }}" rel="icon">
+    <link href="{{ url('/assets/img/Lamsel.png') }}" rel="icon">
     <link href="{{ url('/assets/admin/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
