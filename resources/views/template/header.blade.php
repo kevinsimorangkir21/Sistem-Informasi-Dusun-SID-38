@@ -2,13 +2,13 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     @include('meta::manager', [
-        'title' => 'Dusun 3B | #MajuDesaMajuMasyarakat',
+        'title' => 'Dusun 3B | Desa Karang Anyar',
         'description' => $desc,
         'keywords' => is_array($keyword) == true ? implode(', ', $keyword) : $keyword,
     ])
 
     <!-- Favicons -->
-    <link href="{{ url('/assets/img/R.jpg') }}" rel="icon">
+    <link href="{{ url('/assets/img/Lamsel.png') }}" rel="icon">
     <link href="{{ url('/assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
     <!-- Google Fonts -->

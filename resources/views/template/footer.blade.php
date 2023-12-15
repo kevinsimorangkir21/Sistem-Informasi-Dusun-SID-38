@@ -5,7 +5,7 @@
             <div class="row gy-4">
                 <div class="col-lg-5 col-md-12 footer-info">
                     <a href="index.html" class="logo d-flex align-items-center">
-                        <img src="{{ url('/assets/img/R.jpg') }}" alt="R.jpg">
+                        <img src="{{ url('/assets/img/Lamsel.png') }}" alt="Lamsel">
                         <span>Dusun 3B</span>
                     </a>
                     <p>Lihat Dusun kami lebih jauh di jejaring sosial dengan mengklik media sosial di bawah ini.</p>

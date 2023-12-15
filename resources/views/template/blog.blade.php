@@ -12,7 +12,7 @@
         <div class="row">
           <div class="col-lg-6 d-flex flex-column justify-content-center">
             <h1 data-aos="fade-up">Dusun 3B</h1>
-            <h2 data-aos="fade-up" data-aos-delay="400">Prioritas Informasi Anda Adalah Milik Kami</h2>
+            <h2 data-aos="fade-up" data-aos-delay="400">"Prioritas Informasi Anda Adalah Milik Kami, karena kami memahami bahwa informasi Anda adalah penting bagi Anda."</h2>
             <div data-aos="fade-up" data-aos-delay="600">
               <div class="text-center text-lg-start">
                 <div class="container_mouse">

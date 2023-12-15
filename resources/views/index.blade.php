@@ -12,8 +12,7 @@
                         <h3>Tentang</h3>
                         <h2>Sejarah Dusun 3B.</h2>
                         <p>
-                        when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        Dusun 3B merupakan salah satu desa yang terletak di Kelurahan Karang Anyar, Kec. Jati Agung, Kab. Lampung Selatan. Dusun 3B ini tergolong sebuah dusun baru di Kelurahan Karang Anyar. Dengan statusnya yang terbilang baru, Dusun 3B ini masih bergantung terhadap kebijakan - kebijakan dari Pemerintah Kelurahan Karang Anyar baik dari segi administratif maupun pembangunannya. Saat ini masyarakat sedang menuju kemandirian untuk memajukan Dusun 3B ini, baik dari perekonomian lewat UMKM setempat maupun keaktifannya dalam menyelenggarakan acara - acara dusun seperti gotong royong warga dan lainnya.
 
 
                         </p>
@@ -21,7 +20,7 @@
                 </div>
 
                 <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-                    <img src="assets/img/reuleutbaratt.webp" class="img-fluid img-thumbnail" alt="Dusun 3B">
+                    <img src="assets/img/Dusun.png" class="img-fluid img-thumbnail" alt="Dusun 3B">
                 </div>
 
             </div>
