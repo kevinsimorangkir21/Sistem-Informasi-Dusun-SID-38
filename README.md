@@ -65,6 +65,8 @@ https://git-scm.com/downloads
 
 ### **Intra-Install**
 
+At this stage is the installation stage of this project with the available steps. Here are the installation steps:
+
 <li> Jalankan GitBash dan <i>clone</i> repository GitHub ini</li>
 
 ```bash
