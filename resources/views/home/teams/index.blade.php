@@ -19,8 +19,8 @@
                     {{-- Card --}}
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">STRUKTUR APARATUR DESA</h5>
-                            <p>DESA REULEUT BARAT PERIODE {{ date('Y') }} - {{ date('Y') + 1 }}</p>
+                            <h5 class="card-title">STRUKTUR APARATUR DUSUN</h5>
+                            <p>DUSUN 3B {{ date('Y') }} - {{ date('Y') + 1 }}</p>
                             <a href="{{ url('/team/create') }}" role="button" class="btn btn-primary">
                                 <i class="bi bi-plus-circle"></i> Struktur
                             </a>

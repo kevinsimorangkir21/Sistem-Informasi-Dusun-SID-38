@@ -30,9 +30,9 @@
                                     <thead>
                                         <tr>
                                             <th class="text-center" scope="col">No</th>
-                                            <th class="text-center" scope="col">Slug</th>
+                                            <th class="text-center" scope="col">Slug Kategori</th>
                                             <th class="text-center" scope="col">Nama</th>
-                                            <th class="text-center" scope="col">kunjungan</th>
+                                            <th class="text-center" scope="col">Kunjungan</th>
                                             <th class="text-center" scope="col">Aksi</th>
                                         </tr>
                                     </thead>
