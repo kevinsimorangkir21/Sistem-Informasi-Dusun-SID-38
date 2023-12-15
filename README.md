@@ -25,7 +25,7 @@
 
 ## **Introduction Website**
 
-The Dusun 3B Information System, abbreviated as SID 3B, is an Information System aimed at Hamlet 3B in Karang Anyar Village, Jati Agung District, South Lampung. SID38 is based on a CMS (`<i>`Content Management System`</i>`) using Laravel 5 and Bootstrap framework. SID 3B contains several news, management structures, galleries, and others.
+The Dusun 3B Information System, abbreviated as SID 3B, is an Information System aimed at Hamlet 3B in Karang Anyar Village, Jati Agung District, South Lampung. SID38 is based on a CMS (<i>Content Management System</i>) using Laravel 5 and Bootstrap framework. SID 3B contains several news, management structures, galleries, and others.
 
 ## **Features Website**
 
