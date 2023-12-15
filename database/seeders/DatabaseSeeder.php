@@ -23,21 +23,10 @@ class DatabaseSeeder extends Seeder
             'email' => 'admin@admin.com',
             'email_verified_at' => now(),
             'password' => bcrypt('12345'),
-            'phone' => '085155353793',
-            'address' => 'Desa Reuleut Barat, Kecamatan Muara Batu Kabupaten Aceh Utara',
+            'phone' => '-',
+            'address' => 'Kec Jati Agung Lampung Selatan',
             'user_images' => 'profile-img.jpg',
             'role' => true
-        ]);
-        \App\Models\User::create([
-            'username' => 'Sekretaris Desa',
-            'fullname' => 'Sekretaris Desa',
-            'email' => 'sekdes@reuleutbarat.com',
-            'email_verified_at' => now(),
-            'password' => bcrypt('12345'),
-            'phone' => '085155353793',
-            'address' => 'Desa Reuleut Barat, Kecamatan Muara Batu Kabupaten Aceh Utara',
-            'user_images' => 'profile-img.jpg',
-            'role' => false
         ]);
         // \App\Models\Post::factory(100)->create();
 
@@ -50,12 +39,12 @@ class DatabaseSeeder extends Seeder
             'name' => 'UMKM'
         ]);
         \App\Models\Tag::create([
-            'slug_tag' => 'reuleut-barat-sejahtera',
-            'name_tag' => 'Reuleut Barat sejahtera'
+            'slug_tag' => 'dusun-3b',
+            'name_tag' => 'Dusun 3B'
         ]);
         \App\Models\Tag::create([
-            'slug_tag' => 'KKN TEMATIK',
-            'name_tag' => 'KKN TEMATIK'
+            'slug_tag' => 'Kegiatan-Desa',
+            'name_tag' => 'Kegiatan Desa'
         ]);
     }
 }
