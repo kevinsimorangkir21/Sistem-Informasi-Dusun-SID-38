@@ -73,35 +73,35 @@ At this stage is the installation stage of this project with the available steps
 https://github.com/kevinsimorangkir21/Sistem-Informasi-Dusun-SID-3B.git
 ```
 
-<li> Open Visual Studio Code / Kode Editor lainnya </li>
+<li> Open Visual Studio Code / Other Code Editors </li>
 
-<li> Jalankan Command Prompt / Terminal sejenisnya </li>
+<li> Run Command Prompt / Terminal similar </li>
 
 ```bash
 composer update
 ```
 
-<li> Jalankan XAMPP, buat database. Bisa diakses pada link berikut </li>
+<li> Run XAMPP, create a database. Can be accessed at the following link </li>
 
 ```bash
 http://localhost/phpmyadmin
 ```
 
-<li> Copy .env.example  / jalankan CLI dengan command :</li>
+<li> Copy .env.example / run CLI with command</li>
 
 ```bash
 cp .env.example .env
 ```
 
-<li> Ubah file nama .env.example menjadi .env </li>
+<li> Change the file name .env.example to .env</li>
 
 ```bash
 http://localhost/phpmyadmin
 ```
 
-<li> Akses kembali file .env dan ubah DB_DATABASE dengan nama database yang sudah dibuat di LocalHost </li>
+<li> Access the .env file again and change DB_DATABASE to the name of the database that was created on LocalHost </li>
 
-<li> Jalankan kembali Command Prompt / Terminal dan inputkan : </li>
+<li> Run Command Prompt/Terminal again and enter</li>
 
 ```bash
 php artisan migrate:fresh --seed
@@ -115,7 +115,7 @@ php artisan vendor:publish
 php artisan key:generate
 ```
 
-<li> Untuk mengakses projek ini di web, jalankan command : </li>
+<li> To access this project on the web, run the command</li>
 
 ```bash
 php artisan serve
