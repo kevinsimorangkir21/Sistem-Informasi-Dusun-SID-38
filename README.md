@@ -37,7 +37,7 @@ There are 2 different installation stages, namely <b> Pre Install</b> and <b> In
 
 ### **Pre-Install**
 
-Prepare the tools needed, namely:
+At this stage is the stage of preparing several tools, especially frameworks and tools that will later be needed for this project. The following is needed for this project:
 
 <li> Composer :</li>
 
