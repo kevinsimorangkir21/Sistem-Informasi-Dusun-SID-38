@@ -33,7 +33,7 @@ The Dusun 3B Information System, abbreviated as SID 3B, is an Information System
 
 ## **Installation Steps**
 
-There are 2 stages in the Installation Stage, namely Pre-Install & Intra-Install
+There are 2 different installation stages, namely <b> Pre Install</b> and <b> Intra Install </b>.
 
 ### **Pre-Install**
 
