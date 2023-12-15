@@ -142,4 +142,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-## **
+## **Screenshot**
+The following is the appearance of the Dusun 3B website. This website has been prepared with a perfect structure according to the plot
+
+<img src="public/assets/img/documentation1.png" />
