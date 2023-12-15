@@ -4,9 +4,11 @@
 
 [![Github Commit](https://img.shields.io/github/commit-activity/m/kevinsimorangkir21/SID38)](#)
 [![Github Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg)](#)
+
 </div>
 
 ## **Table Of Contents**
+
 [Introduction Website](#)
 
 [Features Website](#)
@@ -22,16 +24,21 @@
 [Presentation Video](#)
 
 ## **Introduction Website**
-The Dusun 3B Information System, abbreviated as SID 3B, is an Information System aimed at Hamlet 3B in Karang Anyar Village, Jati Agung District, South Lampung. SID38 is based on a CMS (<i>Content Management System</i>) using Laravel 5 and Bootstrap framework. SID 3B contains several news, management structures, galleries, and others.
+
+The Dusun 3B Information System, abbreviated as SID 3B, is an Information System aimed at Hamlet 3B in Karang Anyar Village, Jati Agung District, South Lampung. SID38 is based on a CMS (`<i>`Content Management System`</i>`) using Laravel 5 and Bootstrap framework. SID 3B contains several news, management structures, galleries, and others.
 
 ## **Features Website**
-<li> <b>Dashboard</b> : A feature that aims to organize the content/material on the SID38 website <li> <b>Structure</b> : This feature aims to find out the existing management structure in Hamlet 3B <li> <b>Hamlet Demography</b> : A feature that aims to find out Population, Religion and Occupation Data from Hamlet 3B residents</li>
+
+<li> <b>Dashboard</b> : A feature that aims to organize the content/material on the SID38 website </li> <li><b>Structure</b> : This feature aims to find out the existing management structure in Hamlet 3B <li> <b>News </b> : A feature created with the aim of displaying news in Hamlet 3B <li><b>Galeri</b> : A feature created with the aim of displaying a gallery of activities in Hamlet 3B </li>
 
 ## **Installation Steps**
+
 There are 2 stages in the Installation Stage, namely Pre-Install & Intra-Install
 
 ### **Pre-Install**
+
 Prepare the tools needed, namely:
+
 <li> Composer :</li>
 
 ```bash
@@ -57,6 +64,7 @@ https://git-scm.com/downloads
 ```
 
 ### **Intra-Install**
+
 <li> Jalankan GitBash dan <i>clone</i> repository GitHub ini</li>
 
 ```bash
